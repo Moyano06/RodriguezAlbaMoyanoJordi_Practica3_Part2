@@ -127,5 +127,10 @@ public class Adaptador {
                 "Potència: " + potenciaGenerada + " kW\n" +
                 "Percentatge: " + (potenciaGenerada / demandaPotencia) * 100 + "%\n";
     }
-
+    public int getDia(){
+        return dades.getDia();
+    }
+    public float getGuanysAcumulats(){
+        return dades.getGuanysAcumulats();
+    }
 }
