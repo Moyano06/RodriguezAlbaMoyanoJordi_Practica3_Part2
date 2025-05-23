@@ -25,7 +25,7 @@ public class CentralUB {
     private float demandaPotencia;
 
     /** Creem un adaptador **/
-    private Adaptador adaptador = new Adaptador();
+    public Adaptador adaptador = new Adaptador();
 
     private Scanner sc = new Scanner(System.in);
     
@@ -282,5 +282,9 @@ public class CentralUB {
         // Generar i mostrar nova demanda de potencia
         demandaPotencia = generaDemandaPotencia();
         System.out.println("La demanda de potència elèctrica avui es de " + demandaPotencia + " unitats");
+    }
+
+    public float getDemandaPotencia(){
+        return demandaPotencia;
     }
 }
