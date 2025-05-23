@@ -57,7 +57,8 @@ public class AppCentralUB extends JFrame {
         btnFinalitzarDia.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                FinalitzaDiaDialog dialog = new FinalitzaDiaDialog(AppCentralUB.this, central);
+                dialog.setVisible(true);
             }
         });
 
@@ -65,9 +66,11 @@ public class AppCentralUB extends JFrame {
         btnGuardar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                GuardarCargarDialog dialog = new GuardarCargarDialog(AppCentralUB.this, central);
+                dialog.setVisible(true);
             }
         });
+
     }
     // per fer mes facil el posar la informacio a cada pagina
     public String InformacioDiaria(){
