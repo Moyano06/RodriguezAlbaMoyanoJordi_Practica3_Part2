@@ -130,11 +130,11 @@ public class CentralUB {
             switch (opcioReactor) {
                 case ACTIVAR_REACTOR:
                     adaptador.activaReactor();
-                    System.out.println("prog2.model.components.Reactor activat");
+                    System.out.println("Reactor activat");
                     break;
                 case DESACTIVAR_REACTOR:
                     adaptador.desactivaReactor();
-                    System.out.println("prog2.model.components.Reactor desactivat");
+                    System.out.println("Reactor desactivat");
                     break;
                 case MOSTRAR_ESTAT:
                     System.out.println(adaptador.mostraEstatReactor());
@@ -226,7 +226,7 @@ public class CentralUB {
     //  Descripcions del menú principal i dels corresponents submenús
     static private String[] descMenuPrincipal = {
             "Gestió Barres de Control",
-            "Gestió prog2.model.components.Reactor",
+            "Gestió Reactor",
             "Gestió Sistema Refrigeració",
             "Mostrar Estat Central",
             "Mostrar Bitàcola",
@@ -246,8 +246,8 @@ public class CentralUB {
     };
 
     static private String[] descMenuReactor = {
-            "Activar prog2.model.components.Reactor",
-            "Desactivar prog2.model.components.Reactor",
+            "Activar Reactor",
+            "Desactivar Reactor",
             "Mostrar Estat",
             "Sortir"
     };
@@ -261,7 +261,7 @@ public class CentralUB {
             "Sortir"
     };
     
-    private float generaDemandaPotencia(){
+    public float generaDemandaPotencia(){
         float valor = Math.round(variableNormal.seguentValor());
         if (valor > DEMANDA_MAX)
             return DEMANDA_MAX;
@@ -287,4 +287,8 @@ public class CentralUB {
     public float getDemandaPotencia(){
         return demandaPotencia;
     }
+    public void setDemandaPotencia(float demandaPotencia){
+        this.demandaPotencia = demandaPotencia;
+    }
 }
+
