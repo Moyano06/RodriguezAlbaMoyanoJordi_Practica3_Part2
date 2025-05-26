@@ -41,7 +41,8 @@ public class AppCentralUB extends JFrame {
         btnGestionar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            GestioCentralDialog dialog = new GestioCentralDialog(AppCentralUB.this,central);
+            dialog.setVisible(true);
             }
         });
 
