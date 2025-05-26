@@ -49,7 +49,7 @@ public class BombaRefrigerant implements InBombaRefrigerant, Serializable {
             p.afegeixIncidencia("La bomba refrigerant amb ID: " + getId() + " esta fora de servei");         }
         else {
             foraDeServei = false;
-            activa();
+
         }
     }
 

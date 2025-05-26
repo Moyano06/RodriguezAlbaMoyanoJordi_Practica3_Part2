@@ -44,6 +44,7 @@ public class Reactor implements InComponent, Serializable {
             System.out.println("La temperatura supera els 1000 graus per tant el reactor d'ha de desactivar i es queda fora de servei");
             desactiva();
             foraDeServei = true;
+            p.afegeixIncidencia("El reactor esta fora de servei");
         }
         else if (temperaturaActual <1000 && !activat){
             foraDeServei = false;
