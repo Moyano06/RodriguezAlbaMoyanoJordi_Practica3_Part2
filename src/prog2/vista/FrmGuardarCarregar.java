@@ -5,13 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-public class GuardarCargarDialog extends JDialog {
+public class FrmGuardarCarregar extends JDialog {
     private CentralUB central;
     private JButton btnGuardar;
     private JButton btnCarregar;
     private JPanel panell;
 
-    public GuardarCargarDialog(JFrame principal, CentralUB centralUB) {
+    public FrmGuardarCarregar(JFrame principal, CentralUB centralUB) {
         super (principal , "Gestió de Dades", true);
         setContentPane(panell);
         this.central = centralUB;

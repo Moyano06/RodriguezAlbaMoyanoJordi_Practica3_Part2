@@ -91,7 +91,7 @@ public class Adaptador {
     public String mostraEstatBombes() {
         String bombes = "L'estat de les bombes refrigerants és:\n";
         for (BombaRefrigerant b : dades.mostraSistemaRefrigeracio().getBombaRefrigerants()) {
-            bombes += "Bomba " + b.getId() + " Activada = " + b.getActivat() + "\n";
+            bombes += b.toString() + "\n";
         }
         return bombes;
     }
@@ -133,4 +133,12 @@ public class Adaptador {
     public float getGuanysAcumulats(){
         return dades.getGuanysAcumulats();
     }
+    public boolean estaActivaBomba(int idBomba) {
+        return dades.getBomba(idBomba).getActivat();
+    }
+
+    public boolean estaActiuReactor() {
+        return dades.getReactor().getActivat();
+    }
+
 }

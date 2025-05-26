@@ -92,4 +92,7 @@ public class SistemaRefrigeracio implements InComponent, Serializable {
             return Math.min(input, grausTotal);
 
     }
+    public BombaRefrigerant getBombaRefrigerant(int i) {
+        return bombaRefrigerants.get(i);
+    }
 }

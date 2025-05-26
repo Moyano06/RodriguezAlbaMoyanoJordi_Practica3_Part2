@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.VisualitzaEstatDialog">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.FrmVisualitzarInformacio">
   <grid id="27dc6" binding="panellPrincipal" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-7543434"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="13f88" class="javax.swing.JTextArea" binding="txtArea">
         <constraints border-constraint="Center"/>
-        <properties/>
+        <properties>
+          <background color="-7608954"/>
+        </properties>
       </component>
       <grid id="389e4" binding="adalt" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="North"/>
-        <properties/>
+        <properties>
+          <background color="-7543434"/>
+        </properties>
         <border type="none" title=""/>
         <children>
           <component id="665f4" class="javax.swing.JLabel" binding="lbl">
@@ -39,12 +45,6 @@
           </component>
         </children>
       </grid>
-      <component id="f29f0" class="javax.swing.JButton" binding="btnConfirmar">
-        <constraints border-constraint="South"/>
-        <properties>
-          <text value="Visualitza"/>
-        </properties>
-      </component>
     </children>
   </grid>
 </form>

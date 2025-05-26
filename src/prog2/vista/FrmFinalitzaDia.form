@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.FinalitzaDiaDialog">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.FrmFinalitzaDia">
   <grid id="27dc6" binding="panell" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-7608954"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="c64bd" class="javax.swing.JButton" binding="btnConfirmar">
         <constraints border-constraint="South"/>
         <properties>
+          <background color="-7608954"/>
           <text value="Confirmar finalització de dia"/>
         </properties>
       </component>
       <component id="c8f6d" class="javax.swing.JTextArea" binding="txtArea">
         <constraints border-constraint="Center"/>
         <properties>
+          <background color="-7543434"/>
           <text value=""/>
         </properties>
       </component>
