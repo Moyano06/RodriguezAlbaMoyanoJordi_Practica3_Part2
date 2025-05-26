@@ -1,7 +1,5 @@
 package prog2.vista;
 
-import prog2.adaptador.Adaptador;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,7 +39,7 @@ public class AppCentralUB extends JFrame {
         btnGestionar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            GestioCentralDialog dialog = new GestioCentralDialog(AppCentralUB.this,central);
+            FrmGestioComponentsCentral dialog = new FrmGestioComponentsCentral(AppCentralUB.this,central);
             dialog.setVisible(true);
             }
         });
@@ -50,7 +48,7 @@ public class AppCentralUB extends JFrame {
         btnInformacio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            VisualitzaEstatDialog dialog = new VisualitzaEstatDialog(AppCentralUB.this, central);
+            FrmVisualitzarInformacio dialog = new FrmVisualitzarInformacio(AppCentralUB.this, central);
             dialog.setVisible(true);
             }
         });
@@ -59,7 +57,7 @@ public class AppCentralUB extends JFrame {
         btnFinalitzarDia.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FinalitzaDiaDialog dialog = new FinalitzaDiaDialog(AppCentralUB.this, central);
+                FrmFinalitzaDia dialog = new FrmFinalitzaDia(AppCentralUB.this, central);
                 dialog.setVisible(true);
             }
         });
@@ -68,7 +66,7 @@ public class AppCentralUB extends JFrame {
         btnGuardar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GuardarCargarDialog dialog = new GuardarCargarDialog(AppCentralUB.this, central);
+                FrmGuardarCarregar dialog = new FrmGuardarCarregar(AppCentralUB.this, central);
                 dialog.setVisible(true);
             }
         });

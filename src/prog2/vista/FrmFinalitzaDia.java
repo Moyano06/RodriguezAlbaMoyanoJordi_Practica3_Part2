@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FinalitzaDiaDialog extends JDialog {
+public class FrmFinalitzaDia extends JDialog {
     private CentralUB central;
     private JPanel panell;
     private JButton btnConfirmar;
     private JTextArea txtArea;
 
-    public FinalitzaDiaDialog(JFrame principal, CentralUB central) {
+    public FrmFinalitzaDia(JFrame principal, CentralUB central) {
         super (principal , "Finalitza dia", true);
         this.central = central;
         setSize(300,300);

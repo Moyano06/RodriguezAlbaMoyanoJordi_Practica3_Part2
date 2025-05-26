@@ -3,7 +3,7 @@ package prog2.vista;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class GestioCentralDialog extends JDialog {
+public class FrmGestioComponentsCentral extends JDialog {
     private JPanel panell;
     private JButton btnConfBarres;
     private JSlider sldrBarres;
@@ -19,7 +19,7 @@ public class GestioCentralDialog extends JDialog {
     private JTextArea txtArea;
 
 
-    public GestioCentralDialog(JFrame principal, CentralUB central) {
+    public FrmGestioComponentsCentral(JFrame principal, CentralUB central) {
         setContentPane(panell);
         setSize(500, 500);
         setLocationRelativeTo(principal);
