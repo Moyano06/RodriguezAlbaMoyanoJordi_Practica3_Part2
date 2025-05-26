@@ -18,11 +18,18 @@ public class GestioCentralDialog extends JDialog {
     private JLabel lblForade;
     private JTextArea txtArea;
 
+
     public GestioCentralDialog(JFrame principal, CentralUB central) {
         setContentPane(panell);
         setSize(500, 500);
         setLocationRelativeTo(principal);
+        btnConfBarres.setText("Confirmar (valor actual " + central.adaptador.getInsersioBarres() + "% )");
         sldrBarres.setValue((int)central.adaptador.getInsersioBarres());
+        chkB1.setSelected(central.adaptador.estaActivaBomba(0));
+        chkB2.setSelected(central.adaptador.estaActivaBomba(1));
+        chkB3.setSelected(central.adaptador.estaActivaBomba(2));
+        chkB4.setSelected(central.adaptador.estaActivaBomba(3));
+        reactorSeleccionatEsActiuCheckBox.setSelected(central.adaptador.estaActiuReactor());
         txtArea.setText(central.adaptador.mostraEstatBombes());
 
         // Listener per al botó que recull el valor del slider
@@ -32,6 +39,7 @@ public class GestioCentralDialog extends JDialog {
                 int valorSlider = sldrBarres.getValue();
                 try {
                     central.adaptador.setInsersioBarres((float)valorSlider);
+                    btnConfBarres.setText("Confirmar (valor actual " + central.adaptador.getInsersioBarres() + "% )");
                 } catch (CentralUBException ex) {
                     JOptionPane.showMessageDialog(null, "Valor del slider: " + valorSlider);
                 }
@@ -39,7 +47,7 @@ public class GestioCentralDialog extends JDialog {
             }
         });
 
-        // Listeners per als checkboxes del reactor
+
         reactorSeleccionatEsActiuCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,17 +66,16 @@ public class GestioCentralDialog extends JDialog {
         });
 
         // Altres checkboxes per barres
-        chkB1.addActionListener(e -> gestionaBomba(chkB1, 1, central));
-        chkB2.addActionListener(e -> gestionaBomba(chkB2, 2, central));
-        chkB3.addActionListener(e -> gestionaBomba(chkB3, 3, central));
-        chkB4.addActionListener(e -> gestionaBomba(chkB4, 4, central));
+        chkB1.addActionListener(e -> gestionaBomba(chkB1, 0, central));
+        chkB2.addActionListener(e -> gestionaBomba(chkB2, 1, central));
+        chkB3.addActionListener(e -> gestionaBomba(chkB3, 2, central));
+        chkB4.addActionListener(e -> gestionaBomba(chkB4, 3, central));
     }
 
-    /**
-     * Mètode per gestionar l'estat de cada barra segons si està seleccionada o no
-     */
+
     private void gestionaBomba(JCheckBox checkbox, int idBomba, CentralUB central) {
         if (checkbox.isSelected()) {
+
             try {
                 central.adaptador.activaBomba(idBomba);
             } catch (CentralUBException e) {
@@ -76,11 +83,13 @@ public class GestioCentralDialog extends JDialog {
             }
 
         } else {
+
             try {
                 central.adaptador.desactivaBomba(idBomba);
             } catch (CentralUBException e) {
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
+
         }
     }
 }

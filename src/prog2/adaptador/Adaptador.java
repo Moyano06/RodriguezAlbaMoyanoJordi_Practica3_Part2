@@ -133,4 +133,12 @@ public class Adaptador {
     public float getGuanysAcumulats(){
         return dades.getGuanysAcumulats();
     }
+    public boolean estaActivaBomba(int idBomba) {
+        return dades.getBomba(idBomba).getActivat();
+    }
+
+    public boolean estaActiuReactor() {
+        return dades.getReactor().getActivat();
+    }
+
 }

@@ -262,4 +262,7 @@ public class Dades implements InDades, Serializable {
     public int getDia() {
         return this.dia;
     }
+    public BombaRefrigerant getBomba(int id) { return sistemaRefrigeracio.getBombaRefrigerant(id); }  // o com estiguin guardades
+    public Reactor getReactor() { return reactor; }
+
 }
