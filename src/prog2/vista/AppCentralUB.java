@@ -49,7 +49,8 @@ public class AppCentralUB extends JFrame {
         btnInformacio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            VisualitzaEstatDialog dialog = new VisualitzaEstatDialog(AppCentralUB.this, central);
+            dialog.setVisible(true);
             }
         });
 
