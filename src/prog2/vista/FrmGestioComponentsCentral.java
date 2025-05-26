@@ -25,6 +25,11 @@ public class FrmGestioComponentsCentral extends JDialog {
         setLocationRelativeTo(principal);
         btnConfBarres.setText("Confirmar (valor actual " + central.adaptador.getInsersioBarres() + "% )");
         sldrBarres.setValue((int)central.adaptador.getInsersioBarres());
+        System.out.println("Bomba 0 activa? " + central.adaptador.estaActivaBomba(0));
+        System.out.println("Bomba 1 activa? " + central.adaptador.estaActivaBomba(1));
+        System.out.println("Bomba 2 activa? " + central.adaptador.estaActivaBomba(2));
+        System.out.println("Bomba 3 activa? " + central.adaptador.estaActivaBomba(3));
+
         chkB1.setSelected(central.adaptador.estaActivaBomba(0));
         chkB2.setSelected(central.adaptador.estaActivaBomba(1));
         chkB3.setSelected(central.adaptador.estaActivaBomba(2));
@@ -65,7 +70,6 @@ public class FrmGestioComponentsCentral extends JDialog {
             }
         });
 
-        // Altres checkboxes per barres
         chkB1.addActionListener(e -> gestionaBomba(chkB1, 0, central));
         chkB2.addActionListener(e -> gestionaBomba(chkB2, 1, central));
         chkB3.addActionListener(e -> gestionaBomba(chkB3, 2, central));

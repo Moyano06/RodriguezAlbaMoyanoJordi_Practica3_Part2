@@ -25,14 +25,6 @@ public class SistemaRefrigeracio implements InComponent, Serializable {
         for (BombaRefrigerant b : bombaRefrigerants) {
             b.revisa(p);
         }
-
-        boolean algunaActiva = getActivat();
-
-        if (algunaActiva && !activat) {
-            activa();
-        } else if (!algunaActiva && activat) {
-            desactiva();
-        }
     }
 
 
