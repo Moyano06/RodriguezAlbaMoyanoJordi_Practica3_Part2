@@ -41,6 +41,7 @@ public class AppCentralUB extends JFrame {
             public void actionPerformed(ActionEvent e) {
             FrmGestioComponentsCentral dialog = new FrmGestioComponentsCentral(AppCentralUB.this,central);
             dialog.setVisible(true);
+                txtInformacióInicial.setText(InformacioDiaria());
             }
         });
 
@@ -50,6 +51,7 @@ public class AppCentralUB extends JFrame {
             public void actionPerformed(ActionEvent e) {
             FrmVisualitzarInformacio dialog = new FrmVisualitzarInformacio(AppCentralUB.this, central);
             dialog.setVisible(true);
+                txtInformacióInicial.setText(InformacioDiaria());
             }
         });
 
@@ -59,6 +61,7 @@ public class AppCentralUB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 FrmFinalitzaDia dialog = new FrmFinalitzaDia(AppCentralUB.this, central);
                 dialog.setVisible(true);
+                txtInformacióInicial.setText(InformacioDiaria());
             }
         });
 
@@ -68,6 +71,8 @@ public class AppCentralUB extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 FrmGuardarCarregar dialog = new FrmGuardarCarregar(AppCentralUB.this, central);
                 dialog.setVisible(true);
+                txtInformacióInicial.setText(InformacioDiaria());
+
             }
         });
 
