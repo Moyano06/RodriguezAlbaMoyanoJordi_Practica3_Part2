@@ -62,7 +62,7 @@ public class PaginaEstat extends PaginaBitacola{
         return "# Pàgina Estat\n" +
                 "- Dia: " + super.getDia() + "\n" +
                 "- Inserció Barres: " + insercioBarres + " %\n" +
-                "- Output prog2.model.components.Reactor: " + outputReactor + " Graus\n" +
+                "- Output Reactor: " + outputReactor + " Graus\n" +
                 "- Output Sistema de Refrigeració: " + outputSisRefrigeracio + " Graus\n" +
                 "- Output Generador de Vapor: " + outputGeneradorVapor + " Graus\n" +
                 "- Output prog2.model.components.Turbina: " + outputTurbina + " Unitats de Potència\n";
